@@ -1,0 +1,20 @@
+.navigation-search-auth {
+    display: grid;
+    grid-template-columns: auto auto auto auto;   
+}
+
+.navigation-search-nonauth {
+    display: grid;
+    grid-template-columns: auto auto auto;   
+}
+
+.links {
+    color: rgb(102,176,115);
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none; 
+}
