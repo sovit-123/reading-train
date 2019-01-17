@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import './Landing.css'
+import './Landing.css';
 
 const Landing = () => {
   return (
     <div>
-    <img src={require("../../assets/images/main.png")} alt=""/>
-      </div>
-  )
-}
+      <img
+        src={require('../../assets/images/landing-books.png')}
+        alt="Stack of books"
+        className="landing-image"
+      />
+    </div>
+  );
+};
 
-export default Landing
+export default Landing;

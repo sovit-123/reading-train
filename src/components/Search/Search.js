@@ -3,11 +3,7 @@ import axios from 'axios';
 
 import './Search.css';
 
-const convert = require('xml-js');
-
-//const BASE_URL = 'https://www.goodreads.com/search.xml?key=';
 const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
-//const KEY = process.env.REACT_APP_GR_API_KEY;
 const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 class Search extends Component {
@@ -25,10 +21,8 @@ class Search extends Component {
     const { query } = this.state;
 
     axios
-      //.get(`https://cors-anywhere.herokuapp.com/${BASE_URL}${KEY}&q=${query}`)
       .get(`${BASE_URL}${query}&key=${KEY}`)
       .then(res => {
-        //const result = convert.xml2json(res.data, { compact: true, spaces: 4 });
         const result = (res.data);
         console.log(result);
         this.setState({ result });
