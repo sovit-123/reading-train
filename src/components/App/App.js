@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { withFirebase } from '../Firebase';
-import Navbar from '../Navigation/Navbar';
-import Home from '../Home/Home';
-import LandingPage from '../Landing/Landing';
-import SignInPage from '../SignIn/SignIn';
-import SignUpPage from '../SignUp/index';
-import * as ROUTES from '../../Routes/Routes';
+import { withFirebase } from "../Firebase";
+import Navbar from "../Navigation/Navbar";
+import Home from "../Home/Home";
+import LandingPage from "../Landing/Landing";
+import SignInPage from "../SignIn/SignIn";
+import SignUpPage from "../SignUp/index";
+import * as ROUTES from "../../Routes/Routes";
 
-import './App.css';
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -36,11 +37,14 @@ class App extends Component {
       <Router>
         <div className="app">
           <div className="heading-navigation">
-            <h1 className="heading">Reading Train</h1>
+            <Link to={ROUTES.LANDING} className="links">
+              {" "}
+              <h1 className="heading">Reading Train</h1>
+            </Link>
             <Navbar authUser={this.state.authUser} className="navbar" />
           </div>
 
-        <hr className="bottom-nav-line" />
+          <hr className="bottom-nav-line" />
 
           <div className="routes">
             <Route exact path={ROUTES.LANDING} component={LandingPage} />

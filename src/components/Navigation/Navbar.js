@@ -16,10 +16,14 @@ const NavigationAuth = () => {
     <div>
       <ul className="navigation-search-auth">
         <li>
-          <Link className="links" to={ROUTES.LANDING}>Landing</Link>
+          <Link className="links" to={ROUTES.LANDING}>
+            Landing
+          </Link>
         </li>
         <li>
-          <Link className="links" to={ROUTES.HOME}>Home</Link>
+          <Link className="links" to={ROUTES.HOME}>
+            Home
+          </Link>
         </li>
         <li>
           <SignOutButton />

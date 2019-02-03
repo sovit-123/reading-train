@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import './Search.css';
+import store from '../../store';
+import searchBooks from '../../Actions';
 
 const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const KEY = process.env.REACT_APP_GOOGLE_API_KEY;
@@ -12,8 +14,9 @@ class Search extends Component {
 
     this.state = {
       query: '',
-      result: '',
-      error: null
+      result: [],
+      error: null,
+      isSubmitted: false
     };
   }
 
@@ -23,9 +26,11 @@ class Search extends Component {
     axios
       .get(`${BASE_URL}${query}&key=${KEY}`)
       .then(res => {
-        const result = (res.data);
-        console.log(result);
+        const result = res.data;
         this.setState({ result });
+        console.log(this.state.result);
+        store.dispatch(searchBooks(this.state.result));
+        console.log('The books are', store.getState())
       })
       .catch(error => {
         this.setState({ error });
@@ -38,6 +43,18 @@ class Search extends Component {
     this.setState({
       query: event.target.value
     });
+    const { query } = this.state;
+
+    axios
+      .get(`${BASE_URL}${query}&key=${KEY}`)
+      .then(res => {
+        const result = res.data;
+        this.setState({ result });
+        console.log(this.state.result);
+      })
+      .catch(error => {
+        this.setState({ error });
+      });
   };
 
   render() {

@@ -5,10 +5,11 @@ import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../Routes/Routes';
+import './SignIn.css';
 
 const SignInPage = () => {
   return (
-    <div>
+    <div className="sign-in-page">
       <h1>SignIn</h1>
       <SignInForm />
       <SignUpLink />
@@ -55,22 +56,30 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
+      <form onSubmit={this.onSubmit} className="sign-in-form">
+        <label>
+          <p>Email Address</p>
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder=""
+          />
+          <hr className="email-hr" />
+        </label>
+        <label>
+          <p>Password</p>
+          <input
+            name="password"
+            value={password}
+            onChange={this.onChange}
+            type="password"
+            placeholder=""
+          />
+          <hr className="password-hr" />
+        </label>
+        <button disabled={isInvalid} type="submit" className="sign-in-button">
           Sign In
         </button>
 

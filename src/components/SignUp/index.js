@@ -5,6 +5,8 @@ import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../Routes/Routes';
 
+import './SignUp.css';
+
 const INITIAL_STATE = {
   unsername: '',
   email: '',
@@ -15,7 +17,7 @@ const INITIAL_STATE = {
 
 const SignUpPage = () => {
   return (
-    <div>
+    <div className="sign-up-page">
       <h1>SignUp</h1>
       <SignUpForm />
     </div>
@@ -61,36 +63,52 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type=""
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type=""
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="Submit">
+      <form onSubmit={this.onSubmit} className="sign-up-form">
+        <label>
+          <p>Full Name</p>
+          <input
+            name="username"
+            value={username}
+            onChange={this.onChange}
+            type="text"
+            placeholder=""
+          />
+          <hr className="full-name-hr" />
+        </label>
+        <label>
+          <p>Email</p>
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder=""
+          />
+          <hr className="email1-hr" />
+        </label>
+        <label>
+          <p>Password</p>
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type=""
+            placeholder=""
+          />
+          <hr className="password1-hr" />
+        </label>
+        <label>
+          <p>Confirm Password</p>
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type=""
+            placeholder=""
+          />
+          <hr className="password2-hr" />
+        </label>
+        <button disabled={isInvalid} type="Submit" className="sign-up-button">
           Sign Up
         </button>
 

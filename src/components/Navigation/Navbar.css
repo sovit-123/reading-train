@@ -6,6 +6,7 @@
 .navigation-search-nonauth {
     display: grid;
     grid-template-columns: auto auto auto;   
+    text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
 }
 
 .links {

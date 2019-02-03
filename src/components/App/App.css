@@ -1,12 +1,18 @@
 .app {
   background: rgb(241,242,244);
   height: 100vh;
+  font-family: 'ZCOOL QingKe HuangYou';
 }
 
 .heading {
   margin-top: 0;
   margin-left: 5px;
   color: rgb(38, 179, 64);
+  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
+}
+
+.links {
+  text-decoration: none;
 }
 
 .heading-navigation {

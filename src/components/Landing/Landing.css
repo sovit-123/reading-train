@@ -8,7 +8,7 @@
   margin-left: -3%;
   width: 100%;
   border-width: 60px;
-  filter: drop-shadow(9px 9px 9px rgb(0, 0, 0, 0.8));
+  filter: drop-shadow(9px 9px 9px rgb(0, 0, 0));
 }
 
 .description {
@@ -16,5 +16,14 @@
   margin-top: 40%;
   color: rgb(38, 179, 64);
   font-size: 20px;
-  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
 }
+
+.what-to-find {
+  padding-left: 15%;
+  color: rgb(38, 179, 64);
+  font-size: 20px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+}
+
+

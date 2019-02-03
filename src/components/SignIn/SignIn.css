@@ -1,0 +1,85 @@
+h1 {
+  color: rgb(38, 179, 64);
+}
+
+.sign-in-page {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(38, 179, 64);
+  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
+}
+
+.sign-in-form {
+  margin: auto;
+  width: 300px;
+  height: 200px;
+}
+
+.sign-in-form input {
+  border: none;
+  background: transparent;
+  margin-top: 5px;
+  margin-left: 70px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  font-family: 'ZCOOL QingKe HuangYou';
+  color: rgb(38, 179, 64);
+  font-size: 18px;
+  transition: 0.5s;
+  width: 201px;
+  margin-left: 50px;
+}
+
+.sign-in-form label p {
+  padding-top: 20px;
+}
+
+.sign-in-form input:focus {
+  outline: none;
+  background-color: rgb(193, 255, 193);
+  transition: 0.5s;
+  width: 201px;
+  margin-left: 50px;
+  color: rgb(38, 179, 64);
+}
+
+.sign-in-form input:active {
+  outline: none;
+  background-color: rgb(193, 255, 193);
+  transition: 0.5s;
+  width: 201px;
+  margin-left: 50px;
+  color: rgb(38, 179, 64);
+}
+
+.email-hr,
+.password-hr {
+  margin-top: 0;
+  margin-left: 50px;
+  width: 200px;
+  height: 2px;
+  padding: 0;
+  background-color: rgb(38, 179, 64);
+}
+
+.sign-in-button {
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid rgb(38, 179, 64);
+  color: rgb(38, 179, 64);
+  background-color: white;
+  font-size: 16px;
+  transition: 0.5s;
+  font-family: 'ZCOOL QingKe HuangYou';
+}
+
+.sign-in-button:focus {
+  outline: none;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(193, 255, 193);
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.8);
+}

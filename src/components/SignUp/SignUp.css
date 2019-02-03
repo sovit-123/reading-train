@@ -1,0 +1,75 @@
+.sign-up-page {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(38, 179, 64);
+  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
+}
+
+.sign-up-form {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.sign-up-form input {
+  width: 200px;
+  margin-top: 0px;
+  font-family: 'ZCOOL QingKe HuangYou';
+  color: rgb(38, 179, 64);
+  font-size: 18px;
+  transition: 0.5s;
+  width: 201px;
+  border: none;
+  background: transparent;
+}
+
+.sign-up-form input:focus {
+  outline: none;
+  background-color: rgb(193, 255, 193);
+  transition: 0.5s;
+  width: 201px;
+  color: rgb(38, 179, 64);
+}
+
+.sign-up-form input:active {
+  outline: none;
+  background-color: rgb(193, 255, 193);
+  transition: 0.5s;
+  width: 201px;
+  color: rgb(38, 179, 64);
+}
+
+.full-name-hr,
+.email1-hr,
+.password1-hr,
+.password2-hr {
+  margin-top: 0;
+  width: 200px;
+  height: 2px;
+  padding: 0;
+  background-color: rgb(38, 179, 64);
+}
+
+.sign-up-button {
+  height: 30px;
+  width: 80px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 2px;
+  border: 1px solid rgb(38, 179, 64);
+  color: rgb(38, 179, 64);
+  background-color: white;
+  font-size: 16px;
+  transition: 0.5s;
+  font-family: 'ZCOOL QingKe HuangYou';
+}
+
+.sign-up-button:focus {
+  outline: none;
+}
+
+.sign-up-button:hover {
+  background-color: rgb(193, 255, 193);
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.8);
+}
