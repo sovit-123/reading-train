@@ -1,21 +1,21 @@
 .navigation-search-auth {
-    display: grid;
-    grid-template-columns: auto auto auto auto;   
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .navigation-search-nonauth {
-    display: grid;
-    grid-template-columns: auto auto auto;   
-    text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.7);
 }
 
 .links {
-    color: rgb(38, 179, 64);
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
+  color: rgb(38, 179, 64);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 ul {
-    list-style-type: none; 
+  list-style-type: none;
 }

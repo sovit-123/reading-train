@@ -15,7 +15,7 @@ const Landing = () => {
       <div className="description">
         <p>
           Want to spend a rainy Saturday morning or lazy Sunday afternoon with
-          book in one hand and coffee in the other ?<br />
+          book in one hand and coffee in the other?<br />
           Well, look no further, because you are at the right station. Just buy
           your book and hop on to the Reading Train. <br />
           <b>
@@ -24,10 +24,10 @@ const Landing = () => {
         </p>
       </div>
       <div className="what-to-find">
-        <h3>What will you find here ?</h3>
+        <h3>What will you find here?</h3>
         <p>
           Search for your favourite books. Find the books you want to read and
-          explore the huge library of available books.
+          explore the huge library.
         </p>
       </div>
     </div>

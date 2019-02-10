@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
 
 body {
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
+  background: rgb(241,242,244);
   font-family: 'ZCOOL QingKe HuangYou';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
