@@ -19,9 +19,26 @@
   box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.8);
 }
 
+.book {
+  display: flex;
+}
+
 hr {
   margin-top: 10px;
   height: 1px;
   padding: 0;
   background-color: rgb(38, 179, 64);
+}
+
+.title-author {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(38, 179, 64);
+}
+
+.author {
+  color: black;
 }
