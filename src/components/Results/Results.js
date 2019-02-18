@@ -12,7 +12,7 @@ const Results = () => {
     for (let i = 0; i < allBooks.length; i++) {
       if (allBooks[i].volumeInfo.imageLinks !== undefined) {
         booksInfo[i] = 0;
-        booksInfo[i] = allBooks[i].volumeInfo;
+        booksInfo[i] = allBooks[i];
       }
     }
   }
@@ -22,20 +22,41 @@ const Results = () => {
       {booksInfo.map((data, key = 0) => {
         return (
           <div>
-            <a href={data.infoLink} target="_blank" rel="noopener noreferrer">
-              <div className="book">
+            <div className="book">
+              <a
+                href={data.volumeInfo.infoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
-                  src={data.imageLinks.thumbnail}
+                  src={data.volumeInfo.imageLinks.thumbnail}
                   key={key + 1}
                   alt=""
                   className="thumb-images"
                 />
-                <span className="title-author">
-                  <p>{data.title}</p>
-                  <p className="author">{data.authors}</p>
-                </span>
-              </div>
-            </a>
+              </a>
+              <span className="book-info">
+                <p>
+                  <a
+                    href={data.accessInfo.webReaderLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="title"
+                  >
+                    {data.volumeInfo.title}{" "}
+                  </a>
+                  <a
+                    href={data.volumeInfo.previewLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="preview"
+                  >
+                    Preview
+                  </a>
+                </p>
+                <p className="author">{data.volumeInfo.authors}</p>
+              </span>
+            </div>
             <hr />
           </div>
         );

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import * as ROUTES from '../../Routes/Routes';
-import SignOutButton from '../SignOut';
-import Search from '../Search/Search';
+import * as ROUTES from "../../Routes/Routes";
+import SignOutButton from "../SignOut";
+import Search from "../Search/Search";
 
-import './Navbar.css';
+import "./Navbar.css";
 
 const Navigation = ({ authUser }) => {
   return <div>{authUser ? <NavigationAuth /> : <NavigationNonAuth />}</div>;

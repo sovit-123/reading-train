@@ -30,15 +30,8 @@ class Search extends Component {
         const result = res.data;
         this.setState({ result, isSubmitted: !this.state.isSubmitted });
 
-        // Important code
-        // console.log(this.state.result);
         store.dispatch(searchBooks(this.state.result));
-        // console.log(
-        //   "Image",
-        //   store.getState().fetchState.books.items[9].volumeInfo.imageLinks
-        //     .thumbnail
-        // );
-        console.log("The books are", store.getState());
+        console.log(store.getState())
       })
       .catch(error => {
         this.setState({ error });
@@ -59,10 +52,7 @@ class Search extends Component {
         const result = res.data;
         this.setState({ result });
 
-        // Important code
         store.dispatch(searchBooks(this.state.result));
-        // console.log(store.getState());
-        console.log(this.state.result);
       })
       .catch(error => {
         this.setState({ error });
